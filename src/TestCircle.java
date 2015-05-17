@@ -12,7 +12,11 @@ public class TestCircle extends JFrame{
 
 	public TestCircle(){
 		Circle object = new Circle();
+		Triangle object2 =new Triangle();
+		Square object3 = new Square();
 		add(object);
+		add(object2);
+		add(object3);
 		
 		
 	}
@@ -187,10 +191,11 @@ class Triangle extends JPanel{
 		return 2 * length;
 	}
 	
+}
 	
 	class Square extends JPanel{
 
-		private JTextField jtflength = new JTextField(5);
+		private JTextField jtfLength = new JTextField(5);
 		private JButton jbtCalculate = new JButton("Calculate");
 		private JButton jbtClear = new JButton("Clear");
 		private JTextField jtfArea = new JTextField(5);
@@ -265,4 +270,5 @@ class Triangle extends JPanel{
 		double getPerimeter() {
 			return 4 * length;
 		}
+	}
 		
