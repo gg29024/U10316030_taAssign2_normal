@@ -14,9 +14,9 @@ public class TestCircle extends JFrame{
 		Circle object = new Circle();
 		Triangle object2 =new Triangle();
 		Square object3 = new Square();
-		add(object);
-		add(object2);
-		add(object3);
+		add(object,BorderLayout.NORTH);
+		add(object2,BorderLayout.CENTER);
+		add(object3,BorderLayout.SOUTH);
 		
 		
 	}
@@ -26,7 +26,7 @@ public class TestCircle extends JFrame{
 		frame.setTitle("U10316030_GeoCalculate");
 		frame.setLocationRelativeTo(null); // Center the frame
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(300, 350);
+		frame.pack();
 		frame.setVisible(true);
 	}
 	
@@ -69,10 +69,12 @@ class Circle extends JPanel{
 		p4.add(jtfPerimeter);
 		//size		
 		
-		add(p1, BorderLayout.NORTH);
-		add(p2, BorderLayout.CENTER);
-		add(p3, BorderLayout.CENTER);
-		add(p4, BorderLayout.SOUTH);
+		setLayout(new GridLayout(4,1));
+		
+		add(p1);
+		add(p2);
+		add(p3);
+		add(p4);
 		
 		jbtCalculate.addActionListener(new ButtonListener1());	
 		jbtClear.addActionListener(new ButtonListener2());
@@ -149,10 +151,12 @@ class Triangle extends JPanel{
 		p4.add(jtfPerimeter);
 		//size		
 		
-		add(p1, BorderLayout.NORTH);
-		add(p2, BorderLayout.CENTER);
-		add(p3, BorderLayout.CENTER);
-		add(p4, BorderLayout.SOUTH);
+		setLayout(new GridLayout(4,1));
+		
+		add(p1);
+		add(p2);
+		add(p3);
+		add(p4);
 		
 		jbtCalculate.addActionListener(new ButtonListener1());	
 		jbtClear.addActionListener(new ButtonListener2());
@@ -227,12 +231,14 @@ class Triangle extends JPanel{
 			JPanel p4 = new JPanel(new FlowLayout(FlowLayout.LEFT));
 			p4.add(new JLabel("The perimeter is: "));
 			p4.add(jtfPerimeter);
-			//size		
+			//size	
 			
-			add(p1, BorderLayout.NORTH);
-			add(p2, BorderLayout.CENTER);
-			add(p3, BorderLayout.CENTER);
-			add(p4, BorderLayout.SOUTH);
+			setLayout(new GridLayout(4,1));
+			
+			add(p1);
+			add(p2);
+			add(p3);
+			add(p4);
 			
 			jbtCalculate.addActionListener(new ButtonListener1());	
 			jbtClear.addActionListener(new ButtonListener2());
