@@ -188,7 +188,7 @@ class Triangle extends JPanel{
 	}
 	
 	
-	class Squqre extends JPanel{
+	class Square extends JPanel{
 
 		private JTextField jtflength = new JTextField(5);
 		private JButton jbtCalculate = new JButton("Calculate");
